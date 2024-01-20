@@ -8,7 +8,7 @@ function Navbar() {
     <nav>
         <div className='nav-info'>
             <img className='usericon' src="https://png.pngtree.com/png-vector/20220901/ourmid/pngtree-company-employee-avatar-icon-wearing-a-suit-png-image_6133899.png" alt="" />
-            <h2>{user.name}</h2>
+            <span>{user.name}</span>
         </div>
     </nav>
   );

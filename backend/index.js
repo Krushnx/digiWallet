@@ -7,7 +7,7 @@ const cookieparser = require('cookie-parser')
 mongoose.connect(process.env.DB);
 const app = express();
 const corsOptions ={
-    origin:['http://localhost:3000'], 
+    origin:['http://localhost:3000' , 'https://file-forge.web.app'], 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
