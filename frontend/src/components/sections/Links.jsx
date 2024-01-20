@@ -5,6 +5,7 @@ import './links.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import link from '../../backendlink';
 
 function Links() {
     const { loggedIn, user } = useContext(AuthContext);
@@ -14,7 +15,7 @@ function Links() {
         const fetchData = async () => {
             try {
                 // Make the GET request using Axios
-                const response = await axios.get(`http://localhost:8000/profile/${user._id}`);
+                const response = await axios.get(`${link}/profile/${user._id}`);
                 // Update state with the fetched data
                 setData(response.data);
             } catch (error) {
