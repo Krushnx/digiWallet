@@ -1,18 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-// import PageComponent from './components/Page';
+
+import MYROuter from './router';
+import axios from "axios";
+import { AuthContextProvider } from "./context/authcontext";
+
+axios.defaults.withCredentials = true;
 
 function App() {
   return (
-    <Router>
-        <Navbar />
-
-        <Routes>
-          <Route path="/login" element={<Navbar />} />
-          {/* <Route path="/page" element={<PageComponent />} /> */}
-        </Routes>
-    </Router>
+    <AuthContextProvider>
+      <MYROuter />
+    </AuthContextProvider>
   );
 }
 
